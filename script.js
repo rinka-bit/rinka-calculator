@@ -180,4 +180,44 @@ autoFields.forEach(id => {
 
     });
 
+document
+.getElementById("productType")
+.addEventListener("change", e => {
+
+const type = e.target.value;
+
+if(type === "card"){
+
+document.getElementById("shipping").value = 5;
+document.getElementById("profitPerPiece").value = 10;
+
+}
+
+if(type === "keychain"){
+
+document.getElementById("shipping").value = 10;
+document.getElementById("profitPerPiece").value = 20;
+
+}
+
+if(type === "standee"){
+
+document.getElementById("shipping").value = 20;
+document.getElementById("profitPerPiece").value = 30;
+
+}
+
+if(type === "plush"){
+
+document.getElementById("shipping").value = 50;
+document.getElementById("profitPerPiece").value = 50;
+
+}
+
+document
+.getElementById("calculateBtn")
+.click();
+
+});
+  
 });
