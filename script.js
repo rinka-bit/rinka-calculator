@@ -221,3 +221,38 @@ document
 });
   
 });
+
+[
+  "yuanPrice",
+  "rate",
+  "qty",
+  "discount",
+  "feePercent",
+  "shipping",
+  "profitPerPiece",
+  "roundType"
+].forEach(id => {
+
+  const el = document.getElementById(id);
+
+  if(el){
+
+    el.addEventListener("input", () => {
+
+      document
+        .getElementById("calculateBtn")
+        .click();
+
+    });
+
+  }
+
+document
+.getElementById("hasDiscount")
+.addEventListener("change", () => {
+
+  document
+    .getElementById("calculateBtn")
+    .click();
+
+});
