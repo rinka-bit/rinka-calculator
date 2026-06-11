@@ -156,3 +156,28 @@ text
 alert("คัดลอกโพสต์แล้ว");
 
 });
+
+const autoFields = [
+  "yuanPrice",
+  "rate",
+  "qty",
+  "discount",
+  "feePercent",
+  "shipping",
+  "profitPerPiece",
+  "roundType"
+];
+
+autoFields.forEach(id => {
+
+  document
+    .getElementById(id)
+    .addEventListener("input", () => {
+
+      document
+        .getElementById("calculateBtn")
+        .click();
+
+    });
+
+});
