@@ -163,27 +163,45 @@ alert(
 });
 
 const autoFields = [
-  "yuanPrice",
-  "rate",
-  "qty",
-  "discount",
-  "feePercent",
-  "shipping",
-  "profitPerPiece",
-  "roundType"
+"yuanPrice",
+"rate",
+"qty",
+"discount",
+"feePercent",
+"shipping",
+"profitPerPiece",
+"roundType"
 ];
 
 autoFields.forEach(id => {
 
+const el = document.getElementById(id);
+
+if(el){
+
+```
+el.addEventListener("input", () => {
+
   document
-    .getElementById(id)
-    .addEventListener("input", () => {
+    .getElementById("calculateBtn")
+    .click();
 
-      document
-        .getElementById("calculateBtn")
-        .click();
+});
+```
 
-    });
+}
+
+});
+
+document
+.getElementById("hasDiscount")
+.addEventListener("change", () => {
+
+document
+.getElementById("calculateBtn")
+.click();
+
+});
 
 document
 .getElementById("productType")
@@ -193,109 +211,42 @@ const type = e.target.value;
 
 if(type === "card"){
 
+```
 document.getElementById("shipping").value = 5;
 document.getElementById("profitPerPiece").value = 10;
+```
 
 }
 
 if(type === "keychain"){
 
+```
 document.getElementById("shipping").value = 10;
 document.getElementById("profitPerPiece").value = 20;
+```
 
 }
 
 if(type === "standee"){
 
+```
 document.getElementById("shipping").value = 20;
 document.getElementById("profitPerPiece").value = 30;
+```
 
 }
 
 if(type === "plush"){
 
+```
 document.getElementById("shipping").value = 50;
 document.getElementById("profitPerPiece").value = 50;
+```
 
 }
 
 document
 .getElementById("calculateBtn")
 .click();
-
-});
-
-[
-  "yuanPrice",
-  "rate",
-  "qty",
-  "discount",
-  "feePercent",
-  "shipping",
-  "profitPerPiece",
-  "roundType"
-].forEach(id => {
-
-  const el = document.getElementById(id);
-
-  if(el){
-
-    el.addEventListener("input", () => {
-
-      document
-        .getElementById("calculateBtn")
-        .click();
-
-    });
-
-  }
-
-document
-.getElementById("hasDiscount")
-.addEventListener("change", () => {
-
-  document
-    .getElementById("calculateBtn")
-    .click();
-
-});
-
-  document
-.getElementById("productType")
-.addEventListener("change", e => {
-
-  const type = e.target.value;
-
-  if(type === "card"){
-
-    document.getElementById("shipping").value = 5;
-    document.getElementById("profitPerPiece").value = 10;
-
-  }
-
-  if(type === "keychain"){
-
-    document.getElementById("shipping").value = 10;
-    document.getElementById("profitPerPiece").value = 20;
-
-  }
-
-  if(type === "standee"){
-
-    document.getElementById("shipping").value = 20;
-    document.getElementById("profitPerPiece").value = 30;
-
-  }
-
-  if(type === "plush"){
-
-    document.getElementById("shipping").value = 50;
-    document.getElementById("profitPerPiece").value = 50;
-
-  }
-
-  document
-    .getElementById("calculateBtn")
-    .click();
 
 });
