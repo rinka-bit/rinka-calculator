@@ -145,7 +145,10 @@ document.getElementById(
 ).value;
 
 const text =
-`${name}
+
+`🌸 Rinka Shop
+
+${name}
 
 💰 ราคา ${window.rinkaFinal || 0} บาท`;
 
@@ -153,7 +156,9 @@ navigator.clipboard.writeText(
 text
 );
 
-alert("คัดลอกโพสต์แล้ว");
+alert(
+"คัดลอกโพสต์แล้ว"
+);
 
 });
 
